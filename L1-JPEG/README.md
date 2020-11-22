@@ -1,6 +1,4 @@
-# Video-Coding-Systems
-
-## Lab1 - JPEG
+# Lab1 - JPEG
 
 **1. RGB to YUV and YUV to RGB**
 
@@ -30,7 +28,7 @@ ffmpeg -i {input_file} -vf scale=64:-1 {output_file}
 ```
 | 512x512 - 474KB | 256x256 - 16KB | 128x128 - 7KB | 64x64 - 3KB | 32x32 - 1KB |
 | :---:        |     :---:      |      :---: |     :---:      |          :---: |
-| <img src="L1-JPEG/lenna.jpg"  width="200">   | <img src="L1-JPEG/Results/2-resize/lenna_256.jpg"  width="200">    | <img src="L1-JPEG/Results/2-resize/lenna_128.jpg"  width="200">    |<img src="L1-JPEG/Results/2-resize/lenna_64.jpg"  width="200">     | <img src="L1-JPEG/Results/2-resize/lenna_32.jpg"  width="200">    |
+| <img src="lenna.jpg"  width="200">   | <img src="Results/2-resize/lenna_256.jpg"  width="200">    | <img src="Results/2-resize/lenna_128.jpg"  width="200">    |<img src="Results/2-resize/lenna_64.jpg"  width="200">     | <img src="Results/2-resize/lenna_32.jpg"  width="200">    |
 
 <br/><br/>
 **3. Using FFMPEG to transform the Lenna image into b/w.**
@@ -48,7 +46,7 @@ ffmpeg -y -i {output_file_bw} -q:v 10 {output_file}
 
 | 512x512 - 26KB | 512x512 - 14KB |
 | :---:        |     :---:      |
-| <img src="L1-JPEG/Results/3-bw/lenna_bw.jpg"  width="200">   | <img src="L1-JPEG/Results/3-bw/lenna_bw_compressed.jpg"  width="200">    |
+| <img src="Results/3-bw/lenna_bw.jpg"  width="200">   | <img src="Results/3-bw/lenna_bw_compressed.jpg"  width="200">    | 
 
 
 <br/><br/>
@@ -77,6 +75,6 @@ Using blockwise DCT and IDCT we can encode and decode an image and obtain a comp
 
 |  DCT Coefficients using bloks of size   4x4  |  Decoded image using using bloks of size   4x4  |
 |     :---:     |     :---:     |
-| <img src="L1-JPEG/Screnshoots/DCT_coefficients_4.jpg"  width="200">   | <img src="L1-JPEG/Screnshoots/DCT_4.jpg"  width="200">|
+| <img src="Screnshoots/DCT_coefficients_4.jpg"  width="200">   | <img src="Screnshoots/DCT_4.jpg"  width="200">| 
 | **DCT Coefficients using bloks of size 32x32** | **Decoded image using using bloks of size 32x32** |
-| <img src="L1-JPEG/Screnshoots/DCT_coefficients_32.jpg"  width="200">   | <img src="L1-JPEG/Screnshoots/DCT_32.jpg"  width="200">| 
+| <img src="Screnshoots/DCT_coefficients_32.jpg"  width="200">   | <img src="Screnshoots/DCT_32.jpg"  width="200">| 

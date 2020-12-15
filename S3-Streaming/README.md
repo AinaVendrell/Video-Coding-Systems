@@ -20,9 +20,9 @@ Executing the `script.py` file the following menu will appear:
 **2. Streaming**
 
 <p align="center">
-  <img src="Assets/streaming1.png" >
+  <img src="Assets/streaming1.png" width="800">
 </p>
 
 <p align="center">
-  <img src="Assets/streaming2.png" >
+  <img src="Assets/streaming2.png" width="800">
 </p>

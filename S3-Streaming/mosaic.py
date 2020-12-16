@@ -7,7 +7,10 @@ def mosaic(input_files, size):
     output_path.mkdir(parents=True, exist_ok=True)
     output_file = str(output_path / "mosaic.mkv")
 
-    command = f'ffmpeg -i {input_files[0]}.webm -i {input_files[1]}.mp4 -i {input_files[2]}.mp4 -i {input_files[3]}.mp4 -filter_complex " \
+    # | VP8 | H265 |
+    # | VP9 | AV1  |
+
+    command = f'ffmpeg -i {input_files[0]}.webm -i {input_files[1]}.mp4 -i {input_files[2]}.mp4 -i {input_files[3]}.avi -filter_complex " \
         [0:v] setpts=PTS-STARTPTS, scale=qvga [a0]; \
         [1:v] setpts=PTS-STARTPTS, scale=qvga [a1]; \
         [2:v] setpts=PTS-STARTPTS, scale=qvga [a2]; \

@@ -27,7 +27,11 @@ def transform(size):
     os.system(command)
 
     # AV1
-    command = f"ffmpeg -i {input_file} -c:v libaom-av1 {output_file_AV1}.mp4"
+    command = f"ffmpeg -i {input_file} -c copy {output_file_AV1}.avi"
     os.system(command)
-    
+
     return [output_file_VP8, output_file_VP9, output_file_H265, output_file_AV1]
+    
+    # The following command to create the AV1 video using the codec libaom-av1 didn't work because it didn't recognize libaom-av1
+    # command = f"ffmpeg -i {input_file} -c:v libaom-av1 {output_file_AV1}.mp4"
+
